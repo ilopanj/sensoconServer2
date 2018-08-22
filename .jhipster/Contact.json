@@ -1,0 +1,57 @@
+{
+    "name": "Contact",
+    "fields": [
+        {
+            "fieldName": "emailAddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "firstName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "alertNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "alertEmail",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "notificationGroup",
+            "otherEntityName": "notificationGroup",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "contact"
+        }
+    ],
+    "changelogDate": "20180822200726",
+    "entityTableName": "contact",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "sensoconServer2"
+}
