@@ -1,0 +1,31 @@
+{
+    "name": "Sensor",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "alertsEnabled",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "sensorDevice",
+            "otherEntityName": "sensorDevice",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180822200728",
+    "entityTableName": "sensor",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "microserviceName": "sensoconServer2"
+}
